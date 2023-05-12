@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class ModelDto {
+public class ModelDTO {
     private Long id;
     private float price;
     private float meters;
