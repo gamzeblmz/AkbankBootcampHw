@@ -1,6 +1,6 @@
 # AkbankBootcamp Hafta2
 
-Ev, Villa, Yazlık tipinde 3 adet ev tipi oluşturuldu.
+Ev, Villa, Yazlık tipinde 3 adet ev tipi oluşturuldu.<br>
 Evlerin toplam fiyatlarını dönen bir metot
 Villaların toplam fiyatlarını dönen bir metot
 Yazlıkların toplam fiyatlarını dönen metot
