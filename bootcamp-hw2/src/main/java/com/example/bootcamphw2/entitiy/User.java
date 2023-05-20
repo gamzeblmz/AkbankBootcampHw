@@ -14,7 +14,7 @@ public class User extends BaseEntitiy {
     @SequenceGenerator(name = "User", sequenceName = "USER_ID_SEQ")
     private Long id;
     private String name;
-    private String SurName;
+    private String surName;
     private String userName;
     private String email;
     private String phoneNo;
