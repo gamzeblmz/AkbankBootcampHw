@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * diger servisler tarafindan metotları kullanilacagi ve tes basina bir anlami olmadigi icin abstract olarak
@@ -45,9 +46,14 @@ public abstract class BaseEntitiyService <E extends BaseEntitiy, R extends JpaRe
     /**
      * servislerdeki ortak islemler eklendi.
      */
-
     public List<E> findAll(){
         return repository.findAll();
+    }
+    public E findByIdWithControl(Long id){
+        return repository.findById(id).orElseThrow();
+    }
+    public Optional<E> findById(Long id){
+        return repository.findById(id);
     }
 
 }
