@@ -1,6 +1,7 @@
 package com.example.bootcamphw2.general;
 
 import jakarta.persistence.Embeddable;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
  * baska bir classın alanlarına gömülebilecegini gösterir.
  */
 @Embeddable
+@Data
 public class BaseEntitiyFields {
 
     private Long createdBy;
