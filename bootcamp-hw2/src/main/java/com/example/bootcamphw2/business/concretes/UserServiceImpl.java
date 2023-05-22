@@ -49,5 +49,24 @@ public class UserServiceImpl implements UserService {
        List<User> userList = userManager.findAll();
        return  UserMapper.INSTANCE.convertToUserResponseDTOList(userList);
     }
+    @Override
+    public UserResponseDTO findById(Long id) {
+        User user = userManager.findByIdWithControl(id);
+        return  UserMapper.INSTANCE.converToUserResponseDTO(user);
+    }
+    @Override
+    public UserResponseDTO findByUserName(String userName) {
+        User user = userManager.findUserByUserName(userName);
+        return  UserMapper.INSTANCE.converToUserResponseDTO(user);
+    }
+
+
+    /**
+     * @param userName
+     * @param phoneNo
+     * @return UserResponseDTO
+     * kullanıcı adına ve telefon numarasına göre kullanıcıyı silme.
+     */
+
 
 }

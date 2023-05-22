@@ -20,11 +20,21 @@ public class UserController {
         UserResponseDTO userResponseDTO = userService.save(userRequestDTO);
         return ResponseEntity.ok(userResponseDTO);
     }
-
     @GetMapping("/all")
     public ResponseEntity<List<UserResponseDTO>> findAll(){
         var userResponseDTOList = userService.findAll();
         return ResponseEntity.ok(userResponseDTOList);
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<UserResponseDTO> findById(@PathVariable("id") Long id){
+        var userResponseDTO= userService.findById(id);
+        return ResponseEntity.ok(userResponseDTO);
+    }
+
+    @GetMapping("/userName/{userName}")
+    public ResponseEntity<UserResponseDTO> findByUserName(@PathVariable("userName") String userName){
+        var userResponseDTO= userService.findByUserName(userName);
+        return ResponseEntity.ok(userResponseDTO);
     }
 
 }

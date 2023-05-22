@@ -3,6 +3,8 @@ package com.example.bootcamphw2.business;
 import com.example.bootcamphw2.entitiy.User;
 import com.example.bootcamphw2.general.BaseEntitiyService;
 import com.example.bootcamphw2.repository.UserRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,7 +20,8 @@ public class UserManager extends BaseEntitiyService<User, UserRepository> {
     public User findUserByPhoneNo(String phoneNo){
         return userRepository.findUserByPhoneNo(phoneNo);
     }
-    public User findUserByUserName(String phoneNo){
-        return userRepository.findUserByUserName(phoneNo);
+    public User findUserByUserName(String userName){
+        return userRepository.findUserByUserName(userName);
     }
+
 }
