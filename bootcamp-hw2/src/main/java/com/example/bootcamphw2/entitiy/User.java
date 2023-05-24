@@ -3,11 +3,13 @@ package com.example.bootcamphw2.entitiy;
 import com.example.bootcamphw2.enums.UserType;
 import com.example.bootcamphw2.general.BaseEntitiy;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "USERS")
-@Data
+@Getter
+@Setter
 public class User extends BaseEntitiy {
     @Id
     @GeneratedValue(generator = "User", strategy = GenerationType.SEQUENCE)
